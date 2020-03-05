@@ -1,5 +1,5 @@
 # Project A3 © 2020 Coding Crew
-## `Hayden Kowalchuk`, `Vera Agyiri`, `Mohammad Munsur`, `Ping He`, `Andrew Kennedy`
+## `Hayden Kowalchuk`, `Vera Agyiri`, `Mohammad Munsur`, `Ping He`
 
 
 ## Objectives
