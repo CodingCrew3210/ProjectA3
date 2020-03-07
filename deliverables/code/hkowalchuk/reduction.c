@@ -24,7 +24,7 @@
 /* fill array with random values */
 void initialize(int* a, int n) {
   int i;
-  
+
   for (i = 0; i < n; i++) {
     a[i] = rand() % 1000;
   }
@@ -34,7 +34,7 @@ void initialize(int* a, int n) {
 int sequentialSum(int* a, int n) {
   int sum = 0;
   int i;
-  
+
   for (i = 0; i < n; i++) {
     sum += a[i];
   }
@@ -60,10 +60,10 @@ int parallelSum(int* a, int n) {
   int sum = 0;
   int i;
 
-  #pragma omp parallel for
+#pragma omp parallel for
   for (i = 0; i < n; i++) {
-   #pragma omp critical  
-   sum += a[i];
+#pragma omp critical
+    sum += a[i];
   }
   return sum;
 }
@@ -73,12 +73,11 @@ int main(int argc, char** argv) {
   if (argc > 1) {
     omp_set_num_threads(atoi(argv[1]));
   }
-  
+
   initialize(array, SIZE);
-  
+
   printf("\nSequential sum:\t%d\nParallel sum: \t%d\n\n",
          sequentialSum(array, SIZE),
          parallelSum(array, SIZE));
   return 0;
 }
-
