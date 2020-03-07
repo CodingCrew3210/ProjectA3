@@ -4,7 +4,7 @@
 @ Goal: This program does some arithmetic statements on variables and stores the result in a register
 
 .section .data
-val1:   .byte -60	@ 8-bit signed integer
+val1:  byte -60	@ 8-bit signed integer
 val2:	.byte 11	@ 8-bit signed integer
 val3:	.byte 16	@ 8-bit unsigned integer
 
@@ -12,7 +12,7 @@ val3:	.byte 16	@ 8-bit unsigned integer
 .globl _start
 _start:
 
-  eor r5, r5		@ zero out r5
+  eor r5, r5		  @ zero out r5
 
   ldr r1, =val1		@ move val1 into r1 as a 32bit sign extended byte
   ldrsb r1, [r1]
